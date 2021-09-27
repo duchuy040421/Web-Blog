@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<title>My Blog</title>
+	<link rel="shortcut icon" type="image/png" href="favicon-website.png"/>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </head>
-<body class="preloading">
-	<div id="loader"><img class="load-wrapper" src="intro.gif">	</div>
-	<div class="container">
+<body id="preloading">
+	<div id="loader"><img class="load-wrapper" src="intro.gif"></div>
+	<div class="container row">
 		<div class="left">
 			<div class="right-heading">
 				<h1>NGUYEN DUC HUY</h1>
@@ -19,14 +23,40 @@
 				</p>
 			</div>
 			<div class="info-ava">
-				<img class="avatar" src="avatar.jpg">
+				<div class="avatar-wrapper"><img class="avatar" src="avatar.jpg"></div>
+				<div class="social">
+					<a href="https://www.facebook.com/huy4421/" target="_blank" title="Facebook"><i class="fab fa-facebook" style="color:#4267B2"></i></a>
+					<a href="https://www.linkedin.com/in/duc-huy-9656a21a8/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="color:#0077b5"></i></a>
+					<a href="https://www.instagram.com/_dhuy01/?hl=vi" target="_blank" title="Instagram"><i class="fab fa-instagram" style="color:#833AB4"></i></a>
+				</div>
 			</div>
 			<q>Instead of saying I don't know, I'm going to conquer it.</q>
+			<img src="footer-img.png">
 		</div>
 		<div class="right">
-			<div><a href="https://www.w3schools.com"><img class="button-element" src="button-menu-transparent.png" alt="button-menu"></a></div>
+			<div>
+				<a>
+					<img id="button-element" src="button-menu-transparent-2.png" alt="button-menu">
+				</a>
+			</div>
+			<div id="menu-button">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="menu/info.html">ABOUT ME</a></li>
+					<li><a href="menu/portfolio.html">PORTFOLIO</a></li>
+					<li><a href="menu/chillwithme.html">SOON</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<h4>© Design by <a href="https://www.facebook.com/huy4421/" target="_blank" title="Facebook">Duc Huy</a></h4>
 		</div>
 	</div>
 	<script src="js/function.js"></script>
+	<audio autoplay>
+		<source src="song/yourname.mp3" type="audio/mpeg">
+	</audio>
 </body>
 </html>
