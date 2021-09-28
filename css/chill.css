@@ -1,0 +1,18 @@
+#container{
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	right: 0;
+	bottom: 0;
+}
+
+#content{
+	position: fixed;
+	bottom: 5px;
+	left: 10px;
+}
+
+img:hover{
+	opacity: 0.5;
+	transform: scale(0.9);
+}
