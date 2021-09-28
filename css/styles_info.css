@@ -136,7 +136,30 @@ code{
 }
 
 
+#footer-style{
+	float: left;
+	width: 10%;
+	height: auto;
 
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+	border-radius: 100%;
+	margin: 10px;
+	background-color: #99FFFF;
+	color: black;
+	border: 2px solid #FF007F;
+}
+
+#timeline{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 15px;
+}
 
 /*scrollbar custom*/
 /* width */
