@@ -31,7 +31,13 @@ function button(){
            e.preventDefault(); 
            currentSong = $(this).parent().index();
            $("#audioPlayer")[0].src = this;
-           $("#container")[0].src = "../video/" + list_music[currentSong] + ".mp4"
+
+           if(currentSong<=20){
+            $("#container")[0].src = "../video/" + list_music[currentSong] + ".mp4"
+           }
+           else
+            $("#container")[0].src = "../video/" + "NYC_Trim" + ".mp4"
+           
            $("#audioPlayer")[0].play();
            $("#menu-button li").removeClass("current-song");
             $(this).parent().addClass("current-song");
@@ -42,7 +48,9 @@ function button(){
             if(currentSong == $("#menu-button li a").length)
                 currentSong = 0;
 
-            $("#container")[0].src = "../video/" + list_music[currentSong] + ".mp4"
+            if(currentSong<=20)
+                $("#container")[0].src = "../video/" + list_music[currentSong] + ".mp4";
+
             $("#menu-button li").removeClass("current-song");
             $("#menu-button li:eq("+currentSong+")").addClass("current-song");
             $("#audioPlayer")[0].src = $("#menu-button li a")[currentSong].href;
