@@ -33,10 +33,10 @@ function button(){
            $("#audioPlayer")[0].src = this;
 
            if(currentSong<=20){
-            $("#container")[0].src = "../video/" + list_music[currentSong] + ".mp4"
+            $("#container")[0].src = "../video/" + list_music[currentSong] + ".webm"
            }
            else
-            $("#container")[0].src = "../video/" + "NYC_Trim" + ".mp4"
+            $("#container")[0].src = "../video/" + "NYC_Trim" + ".webm"
            
            $("#audioPlayer")[0].play();
            $("#menu-button li").removeClass("current-song");
@@ -49,7 +49,7 @@ function button(){
                 currentSong = 0;
 
             if(currentSong<=20)
-                $("#container")[0].src = "../video/" + list_music[currentSong] + ".mp4";
+                $("#container")[0].src = "../video/" + list_music[currentSong] + ".webm";
 
             $("#menu-button li").removeClass("current-song");
             $("#menu-button li:eq("+currentSong+")").addClass("current-song");
