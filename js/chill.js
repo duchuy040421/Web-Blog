@@ -36,7 +36,7 @@ function button(){
             $("#container")[0].src = "../video/" + list_music[currentSong] + ".webm"
            }
            else
-            $("#container")[0].src = "../video/" + "NYC_Trim" + ".webm"
+            $("#container")[0].src = "../video/" + "1" + ".webm"
            
            $("#audioPlayer")[0].play();
            $("#menu-button li").removeClass("current-song");
