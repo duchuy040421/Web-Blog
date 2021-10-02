@@ -120,6 +120,18 @@ img{
 	height: auto;
 }
 
+.button{
+	position: absolute;
+	top: 15px;
+	left: 25px;
+}
+
+#container .button button a img{
+	max-width:42px;
+	max-height:42px;
+	width: auto;
+	height: auto;
+}
 
 /*scrollbar custom*/
 /* width */

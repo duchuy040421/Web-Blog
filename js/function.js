@@ -18,3 +18,14 @@ function button(){
 
 	active = !active;
 }
+
+(function() {
+	console.log(window.innerWidth);
+	console.log(window.innerHeight);
+	if(window.innerHeight<=1024 && window.innerWidth <= 1366){
+		info = document.getElementById('check');
+		document.getElementById('check').style.display = "flex";
+	}
+	else
+		document.getElementById('check').style.display = "none";
+})();

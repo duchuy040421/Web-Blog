@@ -6,14 +6,44 @@
 	<link rel="shortcut icon" type="image/png" href="../img/chill-website-icon.png"/>
 	<link rel="stylesheet" type="text/css" href="../css/chill.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-	<video autoplay muted loop id="container">
-		<source src="../video/rain.mp4" type="video/mp4">
-	</video>
-
+	<video autoplay muted loop id="container" src="../video/1.mp4" type="video/mp4"></video>
+	<audio autoplay src="" id="audioPlayer"></audio>
 	<div id="content">
-		<a href=""><img src="../img/music-menu.png"></a>
+		<div id="menu">
+			<ul id="menu-button">
+				<li class="current-song"><a href="../song/chuyencuamuadong.mp3">Chuyen cua mua dong - cover</a></li>
+				<li><a href="../song/cochangtrai.mp3">Co chang trai viet len cay - Phan Manh Quynh</a></li>
+				<li><a href="../song/closure.mp3">Closure - Hayd</a></li>
+				<li><a href="../song/la.mp3">Lạ - Pham Dinh Thai Ngan</a></li>
+				<li><a href="../song/likemyfather.mp3">Like my father - Jax</a></li>
+				<li><a href="../song/thuantheoytroi.mp3">Thuan theo y troi - Bui Anh Tuan</a></li>
+				<li><a href="../song/yeumotnguoisaodau.mp3">Yeu mot nguoi sao dau den the - Noo Phuoc Thinh</a></li>
+				<li><a href="../song/yourname.mp3">なんでもないや - RADWIMPS</a></li>
+				<li><a href="../song/older.mp3">Older - Sasha Alex Sloan</a></li>
+				<li><a href="../song/floracash.mp3">You're Somebody Else - flora cash</a></li>
+				<li><a href="../song/lethergo.mp3">Let her go - Passenger</a></li>
+				<li><a href="../song/giveon.mp3">Heartbreak Anniversary - Giveon</a></li>
+				<li><a href="../song/cigarettes.mp3">Apocalypse - Cigarettes After Sex</a></li>
+				<li><a href="../song/affection.mp3">Affection - Cigarettes After Sex</a></li>
+				<li><a href="../song/mysteryoflove.mp3">Mystery of Love - Sufjan Stevens</a></li>
+				<li><a href="../song/somedaytheboy.mp3">Someday, The Boy - Kim Feel</a></li>
+				<li><a href="../song/namay.mp3">Nam ay - Hai Dang cover</a></li>
+				<li><a href="../song/dancingwithurghost.mp3">Dancing with your ghost - Sasha Alex Sloan</a></li>
+				<li><a href="../song/comethru.mp3">comethru - Jeremy Zucker</a></li>
+				<li><a href="../song/snowman.mp3">Snowman - Sia</a></li>
+				<li><a href="../song/driverlicense.mp3">drivers license - Olivia Rodrigo</a></li>
+			</ul>
+		</div>
+		<div id="menu-icon"><img src="../img/music-menu.png"></div>
+		
 	</div>
+	<script src="../js/chill.js"></script>
+	<script>
+        // loads the audio player
+        audioPlayer();
+    </script>
 </body>
 </html>
