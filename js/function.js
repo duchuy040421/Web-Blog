@@ -22,7 +22,7 @@ function button(){
 (function() {
 	console.log(window.innerWidth);
 	console.log(window.innerHeight);
-	if(window.innerHeight<=1024 && window.innerWidth <= 1366){
+	if(window.innerHeight<=801 && window.innerWidth <= 1280){
 		info = document.getElementById('check');
 		document.getElementById('check').style.display = "flex";
 	}
