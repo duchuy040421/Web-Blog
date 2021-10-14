@@ -1,0 +1,648 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Summary HTML</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(96, 96, 98, 0.93);
+	fill: rgba(96, 96, 98, 0.93);
+}
+.highlight-brown {
+	color: rgba(174, 102, 29, 1);
+	fill: rgba(174, 102, 29, 1);
+}
+.highlight-orange {
+	color: rgba(210, 82, 22, 1);
+	fill: rgba(210, 82, 22, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(62, 143, 53, 1);
+	fill: rgba(62, 143, 53, 1);
+}
+.highlight-blue {
+	color: rgba(33, 131, 190, 1);
+	fill: rgba(33, 131, 190, 1);
+}
+.highlight-purple {
+	color: rgba(151, 93, 190, 1);
+	fill: rgba(151, 93, 190, 1);
+}
+.highlight-pink {
+	color: rgba(203, 62, 132, 1);
+	fill: rgba(203, 62, 132, 1);
+}
+.highlight-red {
+	color: rgba(208, 60, 60, 1);
+	fill: rgba(208, 60, 60, 1);
+}
+.highlight-gray_background {
+	background: rgba(234, 234, 235, 0.93);
+}
+.highlight-brown_background {
+	background: rgba(213, 130, 38, 0.13);
+}
+.highlight-orange_background {
+	background: rgba(252, 103, 27, 0.13);
+}
+.highlight-yellow_background {
+	background: rgba(253, 183, 63, 0.13);
+}
+.highlight-teal_background {
+	background: rgba(76, 169, 66, 0.13);
+}
+.highlight-blue_background {
+	background: rgba(45, 159, 226, 0.13);
+}
+.highlight-purple_background {
+	background: rgba(187, 123, 230, 0.13);
+}
+.highlight-pink_background {
+	background: rgba(255, 85, 163, 0.13);
+}
+.highlight-red_background {
+	background: rgba(255, 82, 71, 0.13);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(96, 96, 98, 0.93);
+	fill: rgba(96, 96, 98, 0.93);
+}
+.block-color-brown {
+	color: rgba(174, 102, 29, 1);
+	fill: rgba(174, 102, 29, 1);
+}
+.block-color-orange {
+	color: rgba(210, 82, 22, 1);
+	fill: rgba(210, 82, 22, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(62, 143, 53, 1);
+	fill: rgba(62, 143, 53, 1);
+}
+.block-color-blue {
+	color: rgba(33, 131, 190, 1);
+	fill: rgba(33, 131, 190, 1);
+}
+.block-color-purple {
+	color: rgba(151, 93, 190, 1);
+	fill: rgba(151, 93, 190, 1);
+}
+.block-color-pink {
+	color: rgba(203, 62, 132, 1);
+	fill: rgba(203, 62, 132, 1);
+}
+.block-color-red {
+	color: rgba(208, 60, 60, 1);
+	fill: rgba(208, 60, 60, 1);
+}
+.block-color-gray_background {
+	background: rgba(234, 234, 235, 0.93);
+}
+.block-color-brown_background {
+	background: rgba(213, 130, 38, 0.13);
+}
+.block-color-orange_background {
+	background: rgba(252, 103, 27, 0.13);
+}
+.block-color-yellow_background {
+	background: rgba(253, 183, 63, 0.13);
+}
+.block-color-teal_background {
+	background: rgba(76, 169, 66, 0.13);
+}
+.block-color-blue_background {
+	background: rgba(45, 159, 226, 0.13);
+}
+.block-color-purple_background {
+	background: rgba(187, 123, 230, 0.13);
+}
+.block-color-pink_background {
+	background: rgba(255, 85, 163, 0.13);
+}
+.block-color-red_background {
+	background: rgba(255, 82, 71, 0.13);
+}
+.select-value-color-gray { background-color: rgba(234, 234, 235, 0.93); }
+.select-value-color-brown { background-color: rgba(213, 130, 38, 0.13); }
+.select-value-color-orange { background-color: rgba(252, 103, 27, 0.13); }
+.select-value-color-yellow { background-color: rgba(253, 183, 63, 0.13); }
+.select-value-color-green { background-color: rgba(76, 169, 66, 0.13); }
+.select-value-color-blue { background-color: rgba(45, 159, 226, 0.13); }
+.select-value-color-purple { background-color: rgba(187, 123, 230, 0.13); }
+.select-value-color-pink { background-color: rgba(255, 85, 163, 0.13); }
+.select-value-color-red { background-color: rgba(255, 82, 71, 0.13); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="baca6617-0250-46be-a544-e6ec72497ad8" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⌨️</span></div><h1 class="page-title">Summary HTML</h1></header><div class="page-body"><h2 id="b116e68d-d539-499f-a05e-ee989d631196" class="">I. Tool</h2><p id="05d0185d-49e4-481f-965d-e11b3a10b3a5" class="">Need to install: </p><ul id="6653fa7c-7eef-459e-83b4-b6ed078a5207" class="toggle"><li><details open=""><summary>Text editor: <a href="https://www.sublimetext.com/download">Sublime text</a> or <a href="https://www.sublimetext.com/download">Visual studio</a></summary></details></li></ul><ul id="e1dfd599-6ca0-4ad2-9e49-68df3f55a559" class="toggle"><li><details open=""><summary>Browser: install <a href="https://www.sublimetext.com/download">Chrome</a></summary></details></li></ul><h2 id="8310c736-9541-4f65-be06-c5606c94719e" class="">II. HTML</h2><h3 id="5fd04ce3-5892-4f84-a54c-ddd6b3c2409e" class="">What is HTML ? </h3><ul id="5ab70c83-4ea8-44a0-97cb-1e3ccd525c22" class="bulleted-list"><li style="list-style-type:disc">A language:<ul id="7c3e169d-95ce-460a-bab3-8fb2a6ffe160" class="bulleted-list"><li style="list-style-type:circle">Annotates hypertext content</li></ul><ul id="5e0fb023-f658-49eb-a46d-b9a2e3b25fc2" class="bulleted-list"><li style="list-style-type:circle">Defines document structure</li></ul></li></ul><p id="b54f8fd1-2733-4a10-b5a9-cf78cd07ebca" class="">HTML stand for: HyperText Markup Language</p><ul id="2059588b-7624-4d42-a130-c4fd88448aa9" class="toggle"><li><details open=""><summary>HyperText: Hypertext is text displayed on a computer display or other electronic devices (is a part of HyperMedia which is plays a huge role in the web today. You can watch videos, listen to music and really hypermedia is just an extension of hypertext.)</summary><ul id="72fe94a6-5f58-4e85-a45a-fda73bb5120b" class="bulleted-list"><li style="list-style-type:disc">Hypertext documents are interconnected by hyperlinks, which are typically activated by a mouse click, keypress set, or screen touch.</li></ul><figure id="8154d2d3-101e-4524-a00e-dc4ea03f68b8" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled.png"><img style="width:497px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled.png"/></a></figure></details></li></ul><ul id="a68ee0b0-7a2c-438d-95ab-196860606f56" class="toggle"><li><details open=""><summary>Markup: </summary><ul id="b07feedb-3d8d-48d8-8b33-9f69e0d9f75b" class="bulleted-list"><li style="list-style-type:disc">A markup language is a system for annotating a document in a way that is visually distinguishable from the content. </li></ul><ul id="350ff4c8-b0e1-435b-be29-9a2398c581b2" class="bulleted-list"><li style="list-style-type:disc">It is used only to format the text, so that when the document is processed for display, the markup language does not appear.</li></ul><ul id="d0e3b00a-e912-492f-8c6e-5897a35d2ee9" class="bulleted-list"><li style="list-style-type:disc">Defines document structure.</li></ul><blockquote id="8fc82d8a-9ee6-4455-aacf-3ea2807124ce" class="">To Simplify: Markup means to mark something up, to annotate.</blockquote></details></li></ul><ul id="e19f18e9-1fb3-4884-bea7-d2a2dc28046b" class="toggle"><li><details open=""><summary>Language: Right and wrong syntax</summary><blockquote id="bc649ebb-d1d8-4de0-a303-b6dc4d46fd5b" class="">Hypertext markup language is language and language basically implies that it has its own syntax meaning there&#x27;s a right and a wrong way to code it.</blockquote></details></li></ul><h3 id="16841741-cbd6-4677-8c08-8fefdb70bef2" class="">The three Core Web Technologies</h3><p id="851f49c3-7e80-40b2-a3cc-fa8d7ca34e3c" class="">The three Core Web Technologies, HTML, CSS, and Javascript work very well together because each one of them has its own distinct and precise role</p><figure id="95134227-06ed-4335-8e65-5a3f7157793a" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%201.png"><img style="width:384px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%201.png"/></a></figure><hr id="abd2c9f4-6906-43e1-b38f-71d802772ace"/><h2 id="fbbc7ac8-4d69-4418-a6e4-e0c8674f8899" class="">III. HTML document structure</h2><h2 id="57d1eecc-a46a-4dbb-867a-1b645dae9335" class=""><a href="https://clearlydecoded.com/assets/images/posts/2017-08-28-html-or-html5-who-controls-html/html-evolution.png">History of HTML</a></h2><figure id="a27f8060-c90c-459f-9604-81dd29a069d0" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%202.png"><img style="width:672px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%202.png"/></a></figure><ul id="02ed8b43-334b-45a0-bfa4-941616b9b42a" class="toggle"><li><details open=""><summary>Before 1997, there were no community standards, so browsers basically did whatever they wanted. They invented new tags. They implemented the same tags differently.</summary></details></li></ul><ul id="3111baa4-ff5b-48a3-9ef3-d6beba2cb89e" class="toggle"><li><details open=""><summary>Around 1997 the World Wide Web Consortium, the W3C, came up with the first standard browsers actually started to pay somewhat attention to, which is HTML4 and they very quickly updated it to HTML4.01.</summary></details></li></ul><ul id="e2d3fdaf-481f-48d3-b007-2af80ee57e2d" class="toggle"><li><details open=""><summary>Around 2000, the W3C came up with another specification called XHTML 1.0 and that specification was based on XML</summary></details></li></ul><ul id="7aa1210d-eee0-4a47-a56a-153bab8c311c" class="toggle"><li><details open=""><summary>In 2004, the browser vendors banded together and created their own group to produce specifications. They called this group Web Hypertext Application Technology Working Group, or WHATWG for short.</summary></details></li></ul><ul id="06c56001-2e94-4381-92c9-5c7e81fd42c0" class="toggle"><li><details open=""><summary>Around 2007, 2009 time frame. So WHATWG and W3C started sort of kind of working together</summary></details></li></ul><ul id="09f03974-d37e-41f7-b6fa-2720423098a0" class="toggle"><li><details open=""><summary>However, W3C’s goal was to publish a frozen specification for HTML version 5 (or HTML5) and WHATWG wanted to continuously evolve the HTML standard. Two fairly different directions. So, in 2011, WHATWG broke away from W3C.</summary></details></li></ul><ul id="cbd9a67a-681b-4638-8b03-bdeb5767a656" class="toggle"><li><details open=""><summary>Today, WHATWG is the organization exclusively in charge of HTML and its related technologies.</summary></details></li></ul><h2 id="98e6a1b7-fbc3-4f91-afc6-a51afd1a672b" class=""><a href="https://html.spec.whatwg.org/multipage/">Living standard</a></h2><ul id="d08d2854-b3fa-46e0-aac3-e9324aa43841" class="toggle"><li><details open=""><summary>Users don’t want software that doesn’t constantly evolve. Nowadays, updates to software can come monthly, if not weekly. So, why should HTML be any different? </summary></details></li></ul><ul id="cd4e85d7-5e49-44f8-a5e6-1b629ea570f0" class="toggle"><li><details open=""><summary>This is why WHATWG develops its HTML standard as a Living Standard. It does not even give a version to HTML. It’s not HTML5. It’s simply HTML.</summary></details></li></ul><ul id="48b40dae-d53c-4db2-aefe-a4a1c91a75bc" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.jaimebutler.ch/learning-the-basic-html-structure/">Basic HTML structure </a><mark class="highlight-yellow"><a href="https://www.jaimebutler.ch/learning-the-basic-html-structure/">(read first)</a></mark></li></ul><figure id="9b9049c7-04a8-49e4-aad9-4b070f380dde" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%203.png"><img style="width:528px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%203.png"/></a></figure><ul id="85dcf831-76cb-457e-a431-2339303dd7b9" class="bulleted-list"><li style="list-style-type:disc"><a href="https://validator.w3.org/">Check your HTML file is validable</a><ul id="f43b0830-61ee-4a08-8f6e-4a028776435b" class="bulleted-list"><li style="list-style-type:circle">Validator checks the markup validity of Web documents in HTML, XHTML, SMIL, MathML, etc. (check the link above)</li></ul></li></ul><ul id="b08b7524-adc9-4d51-b4d3-a39df785c294" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.w3schools.com/html/html_comments.asp">Comment in HTML </a></li></ul><hr id="94aa9794-8eed-423b-b180-da0dce71f18e"/><h2 id="c02cc679-f167-4a78-9db7-e6a4d16c5474" class="">IV. HTML tags and HTML elements</h2><h3 id="d6dcebeb-7e58-49b3-87eb-c7cc4ffa5bab" class="">HTML Tags: </h3><p id="e3695871-7f28-48af-9de5-16437aefd426" class="">Tags are the starting and ending parts of an HTML element. They begin with &lt; symbol and end with &gt; symbol. Whatever written inside &lt; and &gt; are called tags.</p><hr id="8eec54a4-3be8-4fbf-b56d-f55c7c9ae146"/><h3 id="7b172966-d7dd-47c6-8292-2e1da43eb29b" class="">HTML elements:</h3><p id="5b261ea9-bf59-488d-9684-3916922903a5" class=""><a href="https://www.w3schools.com/tags/default.asp">HTML element:</a> An HTML element is defined by a <mark class="highlight-yellow"><strong>start tag</strong></mark><mark class="highlight-yellow">,</mark> some <mark class="highlight-yellow">content</mark>, and an <mark class="highlight-yellow">end tag. </mark>Elements enclose the contents in between the tags<div class="indented"><figure id="f7f9c6d4-5dd3-4108-8f25-d976c6b4cbb5" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%204.png"><img style="width:576px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%204.png"/></a></figure><p id="29e58fb3-9cb6-440b-a170-92145eea1cca" class="">for example: &lt;p id=&quot;myId&quot;&gt;Hello&lt;/p&gt;<div class="indented"><ul id="5add88df-4448-4ca6-aeab-7fb592be88d4" class="toggle"><li><details open=""><summary>p: element name</summary></details></li></ul><ul id="926bb19a-dbc7-4c4f-a356-22562e92c662" class="toggle"><li><details open=""><summary>Hello: content</summary></details></li></ul><ul id="b587da98-e3a7-41b5-af80-8b67dfd67719" class="toggle"><li><details open=""><summary>&lt;p&gt;: open tag, &lt;/p&gt;: closing tag</summary></details></li></ul><ul id="fa20feef-f0b3-4070-9c74-aaa7dc8efc0a" class="toggle"><li><details open=""><summary>id: attribute name</summary></details></li></ul><ul id="51a5ead5-b846-43fc-88d6-c8626c0437e7" class="toggle"><li><details open=""><summary>myId: attribute value</summary></details></li></ul></div></p><ul id="56a6d963-6e5c-4f5d-a7a2-0429f12ea053" class="bulleted-list"><li style="list-style-type:disc">In this case, the tag p, which stands for paragraph, is communicating to us that the content in the gray area should be treated as a paragraph</li></ul></div></p><p id="0dd18056-2f0b-4249-9cb3-f1c16dabf02e" class="">But Some of tags not having a closing tag<div class="indented"><p id="22b6c2b0-768a-4aa2-8a06-38d7c43fdafe" class="">for example: &lt;br&gt;, &lt;hr&gt;</p><ul id="8b6b2d4a-a52a-4774-a8b6-573e54599145" class="bulleted-list"><li style="list-style-type:disc">br stands for line break, and hr stands for horizontal rule, only have an opening tag.</li></ul></div></p><hr id="f1e71295-98a7-42a7-b2f5-4d565e36fce5"/><h3 id="9c4e0ed3-58a2-4f8a-9196-b97c097991bd" class="">HTML Content Models</h3><ul id="95c11ea9-a61c-4c91-8922-19f8a4b78ca1" class="toggle"><li><details open=""><summary>Block-Level elements ≈ Flow content</summary><ul id="61462428-827d-406b-960d-5952daddc2ac" class="bulleted-list"><li style="list-style-type:disc">for example: <mark class="highlight-yellow">div </mark>element</li></ul></details></li></ul><ul id="e7ba8643-2572-4cf8-bc62-6bcf9c3ac841" class="toggle"><li><details open=""><summary>Inline elements ≈ Phrasing content</summary><ul id="34e71045-76ba-431c-9793-4f7416a9a9af" class="bulleted-list"><li style="list-style-type:disc">for example: <mark class="highlight-yellow">span </mark>element</li></ul></details></li></ul><blockquote id="0da6d003-5460-4eb4-bc18-b47713042752" class="">Flow content includes phrasing content</blockquote><ul id="86207520-0c50-459d-b73a-965bc5620517" class="toggle"><li><details open=""><summary>The easiest way to remember, is that if it can be inside a sentence, it&#x27;s phrasing content.</summary><ul id="5ba8c4b9-ee3f-4257-af8b-cae037302e3e" class="bulleted-list"><li style="list-style-type:disc">Text can be inside a sentence, so it&#x27;s phrasing.</li></ul><ul id="b56e99c2-2457-4669-af1b-46e544dd629a" class="bulleted-list"><li style="list-style-type:disc">An <strong>emphasised bit</strong> can be inside a sentence, so it&#x27;s phrasing.</li></ul><ul id="e3e63ab8-96da-4522-81be-3c44ffc9995c" class="bulleted-list"><li style="list-style-type:disc">An image can be inside a sentence, so it&#x27;s phrasing.</li></ul><ul id="0b936768-e0af-4e6b-ae99-1a6867f11ad6" class="bulleted-list"><li style="list-style-type:disc">A sub-heading or an article cannot be inside a sentence, so they are not phrasing.</li></ul></details></li></ul><hr id="1491da89-7ae9-4075-851b-f9e55799aa76"/><h3 id="cf5983c5-1e82-450b-adf1-6b684a4c7e5b" class="">Semantic html elements</h3><p id="e37572f3-9687-40d2-bead-754e71a16f1f" class=""><mark class="highlight-orange">Define:</mark> Element that implies some meaning to the content</p><figure id="c97c8dbe-c4c1-49ee-b42c-171589ceb832" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%205.png"><img style="width:240px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%205.png"/></a></figure><p id="cc1e5d17-3c9c-42cc-b795-0afee108e038" class=""><mark class="highlight-orange">Why using semantic html elements?</mark><div class="indented"><ul id="c7e6607d-0257-4696-ac58-8780e8e66e8c" class="bulleted-list"><li style="list-style-type:disc">Human and/or machine can understand meaning of content surrounded by a semantic element better</li></ul><ul id="15156505-1c77-45d9-be3f-a5adf8d873de" class="bulleted-list"><li style="list-style-type:disc">May help search engine ranking, i.e., SEO</li></ul><ul id="9153c682-5c78-493a-9c73-d57391e8f542" class="bulleted-list"><li style="list-style-type:disc">Can be replaced by <mark class="highlight-yellow">div</mark>.</li></ul><ul id="116f6125-fa44-4e46-bf19-2646db6a65de" class="bulleted-list"><li style="list-style-type:disc">Allow for a more meaningful expression of the structure of our HTML page</li></ul></div></p><p id="89ce96e0-83ea-429d-872f-cce854daeb1e" class=""><mark class="highlight-orange">for example:</mark> header, nav, section, aside and footer </p><blockquote id="6afd4e02-dacf-4a49-891d-95da7d4f5686" class="">Remember, semantic elements do allow you for more meaningful expression of the structure of your HTML code, HTML page, but they don&#x27;t really give you any more functionality than a regular div or regular span would without it.</blockquote><hr id="6355d470-1a69-4a3f-9db1-d344d1a785f6"/><h3 id="9f6b6828-4f96-4a3f-9b04-981fe8b225f8" class="">List tag</h3><ul id="c697d139-dee5-42a6-874b-3081bffe00fa" class="bulleted-list"><li style="list-style-type:disc">Lists are an incredibly useful HTML structure that allows you to group related content.</li></ul><ul id="46d65ad2-3f2a-4986-805f-014ab10e09e1" class="bulleted-list"><li style="list-style-type:disc">Using <mark class="highlight-yellow">ul </mark>(unordered list) or <mark class="highlight-yellow">ol </mark>(ordered list) wrapped around <mark class="highlight-yellow">li </mark>(list element) </li></ul><div id="c10d688b-33af-4002-bc7a-9bc4c3046ef3" class="column-list"><div id="95e06a6e-047b-46ca-80b3-1836a4d5e9c8" style="width:50%" class="column"><figure id="f2fb5a1b-4be3-4089-81cd-f39427a94091" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%206.png"><img style="width:336px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%206.png"/></a></figure></div><div id="4f903ec1-4c95-47c2-94e2-75c83b913d4a" style="width:50%" class="column"><figure id="17535732-2716-4cd4-9918-6d94779e79c3" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%207.png"><img style="width:336px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%207.png"/></a></figure></div></div><hr id="20877674-20fa-46f1-b33b-256e5ad6bee7"/><h3 id="0e58d105-d34c-48a3-b958-da581cdf4827" class="">Link tag</h3><p id="9d3f5bd1-8305-4500-84c6-f3aca04736ee" class="">Read these following example below to understand types of link</p><ul id="97874d28-fac8-4fdd-a998-700cf1d988f8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_external_relative">Internal link</a><ul id="63040efb-aa8f-44dd-9fe8-f6ee11b3394d" class="bulleted-list"><li style="list-style-type:circle">HTML internal link is linked within the same web page. This link can be an absolute path or relative path.</li></ul><ul id="5771c6f6-b900-4946-b2e2-95978929ea01" class="bulleted-list"><li style="list-style-type:circle">for example: &lt;a href=&quot;same-directory.html&quot; title=&quot;same dir link&quot; &gt;&lt;/a&gt;</li></ul></li></ul><ul id="b233665c-9061-4b6a-b7b0-de523352a31f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_external_url">External link</a><ul id="9a5506cd-53f3-4ce5-8369-fa2536028f49" class="bulleted-list"><li style="list-style-type:circle">HTML Link - External HTML Links is linked to external web page. This link is may be absolute path or relative link path.</li></ul><ul id="e148150e-ae54-4168-af41-2a477ec43c2b" class="bulleted-list"><li style="list-style-type:circle">External link is great future to drive a webpage one to another and useful for surf many webpage in website.</li></ul><ul id="5f1f0a31-45a5-4b89-bb5b-6f5ad4570e10" class="bulleted-list"><li style="list-style-type:circle">for example: &lt;a href=&quot;<a href="https://www.hcmus.edu.vn/">https://www.hcmus.edu.vn/</a>&quot; title=&quot;external link&quot; &gt;&lt;/a&gt;</li></ul></li></ul><ul id="03fbeb0e-6273-43f1-bdb2-729e082cd1a9" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_bookmark">Linking to Sections of a Document</a><ul id="83d4de1e-b1b4-42f9-9f1a-9a298a020ddd" class="bulleted-list"><li style="list-style-type:circle">Link to section of the same page</li></ul><ul id="fc5c898d-c200-4cb9-9a9f-3f79efff1168" class="bulleted-list"><li style="list-style-type:circle">for example:&lt;a href=&quot;#lession1&quot;&gt;Lession.1&lt;/a&gt; link can be referred as &lt;a id=&quot;lession1&quot;&gt;Introduction of Lession.1&lt;/a&gt; automatically.</li></ul></li></ul><hr id="d4f28577-f6b5-4bc2-b089-38ecf421c5c3"/><h3 id="e79054a6-9315-45c0-a1cd-0b9e869f960a" class="">Image tag</h3><p id="0d9f7139-1e30-4c66-8f36-595133edf6cc" class=""><a href="https://www.w3schools.com/tags/tag_img.asp#Attributes">Basic attributes</a> with image element<div class="indented"><ul id="77b67ba6-e9ef-4131-8189-371f82d939d5" class="bulleted-list"><li style="list-style-type:disc">for example: &lt;img src=&quot;img_boy.jpg&quot; alt=&quot;Boy in the garden&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;<ul id="b250369b-effb-4e9a-b511-28bd60b72fcb" class="bulleted-list"><li style="list-style-type:circle">src: Specifies the path to the image (URL)</li></ul><ul id="473aa90b-65d9-44e9-8922-029d48172712" class="bulleted-list"><li style="list-style-type:circle">alt: Specifies an alternate text for an image (text)</li></ul><ul id="de4bd886-0d16-45a9-b797-a0eefe5cf0a6" class="bulleted-list"><li style="list-style-type:circle">width/height: Specifies the width/height of an image (pixels)</li></ul></li></ul><figure id="0312c540-d4ad-4cd5-9d69-8960dfbb658f" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%208.png"><img style="width:528px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%208.png"/></a></figure></div></p><hr id="cf8a2ec9-642b-48f0-b098-1c429a0dbfd3"/><h3 id="464c4456-0295-4862-8877-8ae759c3a435" class="">Table tag</h3><p id="daaa730e-386b-458c-bf2e-79b12e6175c0" class=""><a href="https://www.w3schools.com/html/html_tables.asp">Table</a> (table element): each table include row (tr element) and collunm(td or th(header) element)</p><p id="d543cd76-813e-4b4a-b485-3bf39a23f574" class="">Use the rowspan/colspan attribute in HTML specifies the number of rows/cols a cell should span</p><div id="f5548ba1-291c-400f-8a06-413c9591f6a6" class="column-list"><div id="eb675212-3a46-4de8-8ff9-3f194075e404" style="width:50%" class="column"><figure id="fc1a9acd-33e4-4eee-9107-2b64ffd84ee4" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%209.png"><img style="width:384px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%209.png"/></a></figure></div><div id="7134d48b-01ec-42aa-ad25-3622ba31af15" style="width:49.99999999999999%" class="column"><figure id="0b164cb2-80b0-4d22-a413-fe7b119f42a8" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%2010.png"><img style="width:720px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%2010.png"/></a></figure></div></div><hr id="cfd91e3f-46b0-4eaa-b10a-270a31f0e1ba"/><h3 id="e0f66825-ce69-4529-9751-df0aeba63c3b" class="">Form tag</h3><p id="0122cc4f-a475-47e2-8682-74925196d962" class=""><a href="https://www.w3schools.com/html/html_forms.asp">Form</a>: combine with <mark class="highlight-yellow">input </mark>element and <mark class="highlight-yellow">button </mark>element to create a form </p><figure id="6b70bfc3-7d08-4819-ba3b-9fe4d132f4be" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%2011.png"><img style="width:576px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%2011.png"/></a></figure><hr id="f0f03868-0e99-4794-aaf6-b2d752853dd5"/><h3 id="452650a0-9c1d-4f88-aa20-0cdc5d241734" class="">HTML Character Entity References (HTML Special Characters)</h3><p id="6181c9fa-6d8b-4418-b5cc-f1193671c129" class=""><mark class="highlight-yellow">Define: </mark>HTML character entity reference is a special set of characters (a code), which the browser displays as a special character or a symbol, corresponding to the entity reference code. The general format of an HTML character entity reference is &amp; , followed by some code, followed by ; , without any spaces in between.</p><figure id="dc219c55-65da-4a41-8172-cd0ef4274273" class="image"><a href="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%2012.png"><img style="width:600px" src="Summary%20HTML%208154d2d3101e4524a00edc4ea03f68b8/Untitled%2012.png"/></a></figure><p id="7208a82e-f705-4177-9e23-a7f85329b136" class="">
+</p><p id="9e1bad5c-4f7e-47cc-aa21-56fa586ba32f" class="">
+</p><p id="c2111f6c-a018-41d5-a0f0-f1d5a597da32" class="">
+</p></div></article></body></html>
